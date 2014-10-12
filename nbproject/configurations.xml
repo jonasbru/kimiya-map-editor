@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="62">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>ExplorerWidget.cpp</itemPath>
+      <itemPath>ExplorerWidget.h</itemPath>
+      <itemPath>FileDelegate.cpp</itemPath>
+      <itemPath>FileDelegate.h</itemPath>
+      <itemPath>ItemsWidget.cpp</itemPath>
+      <itemPath>ItemsWidget.h</itemPath>
+      <itemPath>KEWidget.cpp</itemPath>
+      <itemPath>KEWidget.h</itemPath>
+      <itemPath>MainWindow.cpp</itemPath>
+      <itemPath>MainWindow.h</itemPath>
+      <itemPath>PreviewItemWidget.cpp</itemPath>
+      <itemPath>PreviewItemWidget.h</itemPath>
+      <itemPath>TreeModel.cpp</itemPath>
+      <itemPath>TreeModel.h</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="4">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>GNU|GNU</compilerSet>
+        <platform>2</platform>
+      </toolsSet>
+      <qt>
+        <modules>core gui opengl</modules>
+      </qt>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>lib/include</pElem>
+            <pElem>/opt/local/include</pElem>
+            <pElem>lib/include2</pElem>
+            <pElem>/usr/local/Trolltech/Qt-4.5.3/include</pElem>
+          </incDir>
+          <commandLine>-lGL -lglut</commandLine>
+          <preprocessorList>
+            <Elem>LINUX</Elem>
+          </preprocessorList>
+          <warningLevel>0</warningLevel>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibFileItem>lib/libKE.so</linkerLibFileItem>
+            <linkerLibFileItem>lib/libjpeg.a</linkerLibFileItem>
+            <linkerLibFileItem>lib/libpng.a</linkerLibFileItem>
+            <linkerLibFileItem>lib/libtinyxml.a</linkerLibFileItem>
+            <linkerLibFileItem>lib/libMapLoader.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/Trolltech/Qt-4.5.3/lib/libQtCore.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/Trolltech/Qt-4.5.3/lib/libQtGui.so</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/Trolltech/Qt-4.5.3/lib/libQtOpenGL.so</linkerLibFileItem>
+          </linkerLibItems>
+        </linkerTool>
+        <requiredProjects>
+          <makeArtifact PL="../2DEngine"
+                        CT="3"
+                        CN="Debug"
+                        AC="true"
+                        BL="true"
+                        WD="../2DEngine"
+                        BC="${MAKE}  -f Makefile CONF=Debug"
+                        CC="${MAKE}  -f Makefile CONF=Debug clean"
+                        OP="dist/Debug/GNU-MacOSX/lib2dengine.a">
+          </makeArtifact>
+        </requiredProjects>
+      </compileType>
+    </conf>
+    <conf name="Release" type="4">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>GNU|GNU</compilerSet>
+        <platform>2</platform>
+      </toolsSet>
+      <qt>
+        <buildMode>1</buildMode>
+        <modules>core gui</modules>
+      </qt>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+    </conf>
+  </confs>
+</configurationDescriptor>
